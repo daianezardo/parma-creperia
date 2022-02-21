@@ -1,0 +1,54 @@
+/* RESET */
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #424242;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding-top: 90px;
+}
+
+:root {
+    --main-color: #B53232;
+}
+
+/* HEADER */
+.header {
+    background-color: #F4F2F2;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.21);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+   
+}
+
+#btn-cart {
+    width: 60px;
+    height: 60px;
+    background-color: #F4F2F2;
+    position: relative;
+}
+
+.btn-cart-badge {
+    color: var(--main-color);
+    border: 1px solid #B53232;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+}
