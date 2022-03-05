@@ -217,6 +217,7 @@ h3 {
      display: grid;
      grid-template-columns: 1fr 1fr;
      gap: 12px;
+     margin-bottom: 15px;
  }
  @media (min-width: 576px) {
      .products-grid {
@@ -228,4 +229,32 @@ h3 {
     .products-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #333;
+    color: #FFF;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin-bottom: 12px;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer .fa-whatsapp-square {
+    color: #26D367;
+    font-size: 44px;
+    margin-right: 14px;
+    vertical-align: middle;
 }
