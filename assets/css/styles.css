@@ -258,3 +258,14 @@ h3 {
     margin-right: 14px;
     vertical-align: middle;
 }
+
+@media (min-width: 576px) {
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer p {
+        margin: 0 40px 0 0;
+    }
+}
