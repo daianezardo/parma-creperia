@@ -23,55 +23,108 @@
                     "name": "Parma com Geleia de Pimenta",
                     "image": "./assets/img/produtos/Parma-com-Geleia-de-Pimenta.png",
                     "description": "Presunto Parma, mussarela e geleia de pimenta.",
-                    "preco": 33.90  
+                    "preco": 33.90
                 },
                 {
                     "id": 5,
                     "name": "Carbonara",
                     "image": "./assets/img/produtos/carbonara.png",
                     "description": "Creme carbonara (ovos, bacon, requeijão, parmesão, nata, leite), mussarela, catupiry e orégano.",
-                    "preco": 33.90  
+                    "preco": 33.90
                 },
                 {
                     "id": 6,
                     "name": "Chester",
                     "image": "./assets/img/produtos/Chester.png",
                     "description": "Chester com alho poró, mussarela, catupiry e orégano.",
-                    "preco": 33.90  
+                    "preco": 33.90
                 },
                 {
                     "id": 7,
                     "name": "Filé ao Gorgonzola",
                     "image": "./assets/img/produtos/Filé-ao-gorgonzola.png",
                     "description": "Filé, gorgonzola, mussarela, catupiry e orégano.",
-                    "preco": 33.90  
+                    "preco": 33.90
                 },
                 {
                     "id": 8,
                     "name": "Filé com Cebora Caramelizada",
                     "image": "./assets/img/produtos/Filé-com-cebola-caramelizada.png",
                     "description": "Filé, cebola caramelizada e mussarela.",
-                    "preco": 33.90  
+                    "preco": 33.90
                 },
                 {
                     "id": 9,
                     "name": "Frango",
                     "image": "./assets/img/produtos/frango.png",
                     "description": "Frango ao molho de requeijão, mussarela, catupiry e orégano. (Opcionais sem custo: bacon e cheddar).",
-                    "preco": 33.90     
+                    "preco": 33.90
                 }
             ]
-          },
-      {
+        },
+        {
             "id": 10,
             "name": "Crepes Doces",
             "products": [
                 {
-
+                    "id": 11,
+                    "name": "Ouro Branco",
+                    "image": "./assets/img/produtos/ouro-branco.png",
+                    "description": "Chocolate ao leite, meio amargo ou branco com bombom Ouro Branco.",
+                    "preco": 33.90
+                },
+                {
+                    "id": 12,
+                    "name": "Paçoca",
+                    "image": "./assets/img/produtos/paçoca.png",
+                    "description": "Chocolate ao leite, meio amargo ou branco com paçoca.",
+                    "preco": 33.90
+                },
+                {
+                    "id": 13,
+                    "name": "Brigadeiro",
+                    "image": "./assets/img/produtos/brigadeiro.png",
+                    "description": "Brigadeiro feito com leite condensado e chocolate em pó.",
+                    "preco": 33.90
+                },
+                {
+                    "id": 14,
+                    "name": "Cocada Cremosa",
+                    "image": "./assets/img/produtos/cocada-cremosa.png",
+                    "description": "Coco, leite condensado e leite de coco.",
+                    "preco": 33.90
                 }
             ]
-          }
-        ]
-      }
-    
-          
+        },
+        {
+            "id": "15",
+            "name": "Bebidas",
+            "products": [
+                {
+                    "id": "16",
+                    "name": "Coca-cola 2L",
+                    "image": "assets/img/produtos/bebidas-coca-cola.jpg",
+                    "price": 12.9
+                },
+                {
+                    "id": "17",
+                    "name": "Fanta 2L",
+                    "image": "assets/img/produtos/bebidas-fanta.jpg",
+                    "price": 12.9
+                },
+                {
+                    "id": "18",
+                    "name": "Mate Couro 2L",
+                    "image": "assets/img/produtos/bebidas-mate-couro.jpg",
+                    "price": 12.9
+                },
+                {
+                    "id": "19",
+                    "name": "Kuat 2L",
+                    "image": "assets/img/produtos/bebidas-kuat.jpg",
+                    "price": 10.9
+                }
+            ]
+        }
+    ]
+}
