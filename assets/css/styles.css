@@ -218,7 +218,9 @@ h3 {
      grid-template-columns: 1fr 1fr;
      gap: 12px;
      margin-bottom: 15px;
+     grid-auto-rows: 1fr;
  }
+
  @media (min-width: 576px) {
      .products-grid {
          grid-template-columns: 1fr 1fr 1fr;

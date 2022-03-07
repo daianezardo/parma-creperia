@@ -1,0 +1,77 @@
+{
+    "groups": [
+        {
+            "id": 1,
+            "name": "Crepes Salgados",
+            "products": [
+                {
+                    "id": 2,
+                    "name": "Calabresa",
+                    "image": "./assets/img/produtos/calabresa.jpg",
+                    "description": "Calabresa, mussarela, catupiry e orégano.",
+                    "price": 33.90
+                },
+                {
+                    "id": 3,
+                    "name": "Burrata com Parma",
+                    "image": "./assets/img/produtos/Burrata-com-parma.png",
+                    "description": "Burrata, presunto Parma e pesto.",
+                    "preco": 33.90
+                },
+                {
+                    "id": 4,
+                    "name": "Parma com Geleia de Pimenta",
+                    "image": "./assets/img/produtos/Parma-com-Geleia-de-Pimenta.png",
+                    "description": "Presunto Parma, mussarela e geleia de pimenta.",
+                    "preco": 33.90  
+                },
+                {
+                    "id": 5,
+                    "name": "Carbonara",
+                    "image": "./assets/img/produtos/carbonara.png",
+                    "description": "Creme carbonara (ovos, bacon, requeijão, parmesão, nata, leite), mussarela, catupiry e orégano.",
+                    "preco": 33.90  
+                },
+                {
+                    "id": 6,
+                    "name": "Chester",
+                    "image": "./assets/img/produtos/Chester.png",
+                    "description": "Chester com alho poró, mussarela, catupiry e orégano.",
+                    "preco": 33.90  
+                },
+                {
+                    "id": 7,
+                    "name": "Filé ao Gorgonzola",
+                    "image": "./assets/img/produtos/Filé-ao-gorgonzola.png",
+                    "description": "Filé, gorgonzola, mussarela, catupiry e orégano.",
+                    "preco": 33.90  
+                },
+                {
+                    "id": 8,
+                    "name": "Filé com Cebora Caramelizada",
+                    "image": "./assets/img/produtos/Filé-com-cebola-caramelizada.png",
+                    "description": "Filé, cebola caramelizada e mussarela.",
+                    "preco": 33.90  
+                },
+                {
+                    "id": 9,
+                    "name": "Frango",
+                    "image": "./assets/img/produtos/frango.png",
+                    "description": "Frango ao molho de requeijão, mussarela, catupiry e orégano. (Opcionais sem custo: bacon e cheddar).",
+                    "preco": 33.90     
+                }
+            ]
+          },
+      {
+            "id": 10,
+            "name": "Crepes Doces",
+            "products": [
+                {
+
+                }
+            ]
+          }
+        ]
+      }
+    
+          
