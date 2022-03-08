@@ -13,17 +13,17 @@ const btnCartcloseEl = document.getElementById('btn-close-cart')
 btnCartcloseEl.addEventListener('click', closeSidebar)
 
 const fetchProducts = () => {
+    const groupsRootEl = document.querySelector('#groups-root')
     fetch('http://127.0.0.1:5500/products.json')
     .then(res => res.json())
     .then(data => {
-        const groupsRootEl = document.querySelector('#groups-root')
      data.groups.forEach((item) => {
          const groupSectionEl = getSelectionElement(item)
          groupsRootEl.appendChild(groupSectionEl)  
      })
     })
     .catch(() => {
-        console.log('Deu ruim')
+        groupsRootEl.innerHTML = '<p class="error-alert">Falha ao buscar produtos. Por favor tente novamente.</p>'
         
          })
 }

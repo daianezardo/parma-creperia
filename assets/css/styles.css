@@ -221,6 +221,14 @@ h3 {
      grid-auto-rows: 1fr;
  }
 
+ .error-alert {
+    background-color: #fcc2c2;
+    border: 1px solid #bd5656;
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: #8c0606;
+ }
+
  @media (min-width: 576px) {
      .products-grid {
          grid-template-columns: 1fr 1fr 1fr;
