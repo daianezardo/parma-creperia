@@ -43,10 +43,14 @@ const fetchProducts = () => {
             <div class="card-content">
             <h3>${product.name}</h3>
             <p class="price">R$ ${product.price.toLocaleString('pt-br', { minimumFractionDigits: 2})}</p>
-            ${product.description ? `<p>${product.description}<p>` : ' '}
+            ${product.description ? `<p>${product.description}</p>` : ' '}
             <button class="btn btn-main">Adicionar</button>
         </div> 
         `
+        const btnAddCartEl = cardWrapEl.querySelector('button')
+        btnAddCartEl.addEventListener('click', () => {
+            addTocart(product)
+        })
 
             productsGridEl.appendChild(cardWrapEl)
         })
@@ -54,3 +58,22 @@ const fetchProducts = () => {
         return sectionEl
     }
 fetchProducts()
+
+    const productsCart = []
+    console.log(productsCart)
+    const addTocart = newProduct => {
+            const productIndex = productsCart.findIndex(
+                item => item.id === newProduct.id
+            )
+
+        if (productIndex === -1) {
+            productsCart.push({
+                ...newProduct,
+                qty: 1
+            })
+        } else {
+            productsCart[productIndex].qty++
+        }
+        
+        console.log(productsCart)
+    }

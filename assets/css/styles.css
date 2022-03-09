@@ -239,7 +239,11 @@ h3 {
     .products-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    .title-subtitle {
+        padding-top: 30px;
+    }
 }
+
 
 /* FOOTER */
 
