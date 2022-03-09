@@ -14,7 +14,7 @@ btnCartcloseEl.addEventListener('click', closeSidebar)
 
 const fetchProducts = () => {
     const groupsRootEl = document.querySelector('#groups-root')
-    fetch('http://127.0.0.1:5500/products.json')
+    fetch('/products.json')
     .then(res => res.json())
     .then(data => {
      data.groups.forEach((item) => {
