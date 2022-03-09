@@ -65,10 +65,14 @@ body {
     width: 20px;
     height: 20px;
     font-size: 12px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: #FFF;
+}
+
+.btn-cart-badge-show {
+    display: flex;
 }
 
 @media (min-width: 992px) {

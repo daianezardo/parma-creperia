@@ -60,7 +60,6 @@ const fetchProducts = () => {
 fetchProducts()
 
     const productsCart = []
-    console.log(productsCart)
     const addTocart = newProduct => {
             const productIndex = productsCart.findIndex(
                 item => item.id === newProduct.id
@@ -74,6 +73,18 @@ fetchProducts()
         } else {
             productsCart[productIndex].qty++
         }
+
+        handleCartUpdade()
+    }
         
-        console.log(productsCart)
+    const handleCartUpdade = () => {
+         if (productsCart.length > 0) {
+             const CartBadgeEl = document.querySelector('.btn-cart-badge')
+             CartBadgeEl.classList.add('btn-cart-badge-show')
+             let total = 0
+             productsCart.forEach(product => {
+                 total = total + product.qty
+             })
+             CartBadgeEl.textContent = total
+         }
     }
