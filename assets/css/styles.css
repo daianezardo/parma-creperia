@@ -129,7 +129,7 @@ h2, .h2 {
     margin-bottom: 8px;
 }
 
-h3 {
+h3, .h3 {
     font-weight: 600;
     font-size: 16px;
     color: #333;
@@ -316,7 +316,7 @@ h3 {
 
 #empty-cart {
     flex-grow: 1;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -330,8 +330,81 @@ h3 {
 
 }
 
+#cart-with-products ul { 
+    list-style: none;
+}
+
+#cart-with-products li { 
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 12px 0;
+}
+
+#cart-with-products li img { 
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+#cart-with-products li .form-input {
+    width: 68px;
+    text-align: center;
+    align-self: center;
+}
+
+#cart-with-products li button {
+    color: var(--main-color);
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    align-self: center;
+    cursor: pointer;
+}
+#cart-with-products li div {
+   flex-grow: 1;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.cart-total p:last-child{
+    font-size: 18px;
+}
+
+.cart-total .h2 {
+    margin: 0;
+}
+
+#cart-with-products {
+    overflow: auto;
+    display: none;
+
+}
+
+#cart-with-products .btn-outline {
+    margin-bottom: 12px;
+ }
+
 @media (min-width: 768px) {
     .cart-sidebar {
         width: 428px;
     }
+}
+
+/* FORMS */
+
+.form-input {
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    height: 38px;
+    font-family: inherit;
+    padding: 9px;
+    font-size: 16px;
+
 }

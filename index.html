@@ -31,66 +31,6 @@
     <main class="container">
         <h1 class="title-subtitle">Cardápio</h1>
         <div id="groups-root"></div>
-        <!-- <section>
-            <h2>Crepes Salgados</h2>
-            <div class="products-grid">
-                <article class="card">
-                    <img src="./assets/img/produtos/calabresa.jpg" alt="crepe de calabresa" width="316" height="193">
-                    <div class="card-content">
-                        <h3>Calabresa</h3>
-                        <p class="price">R$ 33,90</p>
-                        <p>Massa artesanal, molho ao sugo, muçarela, calabresa, cebola e milho.</p>
-                        <button class="btn btn-main">Adicionar</button>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="./assets/img/produtos/Burrata-com-Parma.png" alt="crepe de calabresa" width="316" height="193">
-                    <div class="card-content">
-                        <h3>Calabresa</h3>
-                        <p class="price">R$ 33,90</p>
-                        <p>Massa artesanal, molho ao sugo, muçarela, calabresa, cebola e milho. Massa artesanal, molho
-                            ao sugo, muçarela, calabresa, cebola e milho.</p>
-                        <button class="btn btn-main">Adicionar</button>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="./assets/img/produtos/Parma-com-Geleia-de-Pimenta.png" alt="crepe de calabresa" width="316" height="193">
-                    <div class="card-content">
-                        <h3>Calabresa</h3>
-                        <p class="price">R$ 33,90</p>
-                        <p>Massa artesanal, molho ao sugo, muçarela, calabresa, cebola e milho.</p>
-                        <button class="btn btn-main">Adicionar</button>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="./assets/img/produtos/calabresa.jpg" alt="crepe de calabresa" width="316" height="193">
-                    <div class="card-content">
-                        <h3>Calabresa</h3>
-                        <p class="price">R$ 33,90</p>
-                        <p>Massa artesanal, molho ao sugo, muçarela, calabresa, cebola e milho.</p>
-                        <button class="btn btn-main">Adicionar</button>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="./assets/img/produtos/calabresa.jpg" alt="crepe de calabresa" width="316" height="193">
-                    <div class="card-content">
-                        <h3>Calabresa</h3>
-                        <p class="price">R$ 33,90</p>
-                        <p>Massa artesanal, molho ao sugo, muçarela, calabresa, cebola e milho.</p>
-                        <button class="btn btn-main">Adicionar</button>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="./assets/img/produtos/calabresa.jpg" alt="crepe de calabresa" width="316" height="193">
-                    <div class="card-content">
-                        <h3>Calabresa</h3>
-                        <p class="price">R$ 33,90</p>
-                        <p>Massa artesanal, molho ao sugo, muçarela, calabresa, cebola e milho.</p>
-                        <button class="btn btn-main">Adicionar</button>
-                    </div>
-                </article>
-            </div>
-        </section> -->
     </main>
     <footer class="footer">
         <p>Ou se preferir, chama no WhatsApp:</p>
@@ -106,6 +46,53 @@
         <div id="empty-cart">
             <i class="fa-solid fa-bag-shopping"></i>
             <p class="h2">Seu carrinho está vazio</p>
+        </div>
+        <div id="cart-with-products">
+            <p class="h2">Resumo do pedido:</p>
+            <ul>
+                <li>
+                    <img src="./assets/img/produtos/Burrata-com-Parma.png" alt="Burrata com parma" width="70"
+                        height="70">
+                    <div>
+                        <p class="h3">Burrata com Parma</p>
+                        <p class="price">R$ 33,90</p>
+                    </div>
+                    <input class="form-input" type="number"/>
+                    <button>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+                <li>
+                    <img src="./assets/img/produtos/Burrata-com-Parma.png" alt="Burrata com parma" width="70"
+                        height="70">
+                    <div>
+                        <p class="h3">Burrata com Parma</p>
+                        <p class="price">R$ 33,90</p>
+                    </div>
+                    <input class="form-input" type="number"/>
+                    <button>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+                <li>
+                    <img src="./assets/img/produtos/Burrata-com-Parma.png" alt="Burrata com parma" width="70"
+                        height="70">
+                    <div>
+                        <p class="h3">Burrata com Parma</p>
+                        <p class="price">R$ 33,90</p>
+                    </div>
+                    <input class="form-input" type="number"/>
+                    <button>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="cart-total">
+            <p class="h2">Total</p>
+            <p class="h3">R$ 67,80</p>
+            </div>
+            <button class="btn btn-outline">Adicionar mais itens</button>
+            <button class="btn btn-main">Fazer pedido</button>
         </div>
     </aside>
     <script src="./assets/js/scripts.js"></script>
