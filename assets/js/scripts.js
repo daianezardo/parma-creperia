@@ -83,18 +83,46 @@ const addTocart = newProduct => {
 const handleCartUpdade = () => {
     const emptyCartEl = document.querySelector('#empty-cart')
     const cartWithProductsEl = document.querySelector('#cart-with-products')
+    const cartProductsListEl = cartWithProductsEl.querySelector('ul')
     if (productsCart.length > 0) {
+        // Calcula totais
+        let total = 0
+        let totalPrice = 0
+        productsCart.forEach(product => {
+            total = total + product.qty
+            totalPrice = totalPrice + product.price * product.qty
+        })
         // Atualizar a badge
         const CartBadgeEl = document.querySelector('.btn-cart-badge')
         CartBadgeEl.classList.add('btn-cart-badge-show')
-        let total = 0
-        productsCart.forEach(product => {
-            total = total + product.qty
-        })
         CartBadgeEl.textContent = total
+        // Atualiza o total do carrinho
+        const cartTotalEl = document.querySelector('.cart-total p:last-child')
+        cartTotalEl.textContent = totalPrice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})
+        
         // Exibir carrinho com produtos
         cartWithProductsEl.classList.add('cart-with-products-show')
         emptyCartEl.classList.remove('empty-cart-show')
+        // Exibir produtos do carrinho na tela
+        cartProductsListEl.innerHTML = ''
+        productsCart.forEach((product) => {
+            const listItemEl = document.createElement('li')
+            listItemEl.innerHTML =  `
+            <img src="${product.image}" alt="${product.name}" width="70"
+                height="70">
+            <div>
+                <p class="h3">${product.name}</p>
+                <p class="price">R$ ${product.price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}</p>
+            </div>
+            <input class="form-input" type="number" value="${product.qty}"/>
+            <button>
+                <i class="fa-solid fa-trash-can"></i>
+            </button>
+        `
+            cartProductsListEl.appendChild(listItemEl)
+        })
+        // Calcular o valor total do carrinho
+
     }   else {
         // Exibir carrinho vazio
         
