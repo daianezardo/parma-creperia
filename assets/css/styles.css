@@ -322,6 +322,10 @@ h3, .h3 {
     align-items: center;
 }
 
+#empty-cart.empty-cart-show {
+    display: flex;
+}
+
 #empty-cart .fa-bag-shopping{
     color: var(--main-color);
     font-size: 154px;
@@ -386,6 +390,11 @@ h3, .h3 {
     display: none;
 
 }
+#cart-with-products.cart-with-products-show {
+    display: block;
+
+}
+
 
 #cart-with-products .btn-outline {
     margin-bottom: 12px;
