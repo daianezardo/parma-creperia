@@ -63,8 +63,8 @@ fetchProducts()
 let productsCart = []
 const addTocart = newProduct => {
     const productIndex = productsCart.findIndex
-    
-    (item => item.id === newProduct.id)
+
+        (item => item.id === newProduct.id)
 
     if (productIndex === -1) {
         productsCart.push(
@@ -79,17 +79,31 @@ const addTocart = newProduct => {
 
     handleCartUpdade()
 }
-    const removeOfCart = id => {
-       productsCart = productsCart.filter((product) => {
-            if (product.id === id) {
-                return false
-            }
-                return true
-        })
-        handleCartUpdade()
+const removeOfCart = id => {
+    productsCart = productsCart.filter((product) => {
+        if (product.id === id) {
+            return false
+        }
+        return true
+    })
+    handleCartUpdade()
+    if (productsCart.length === 0) {
+        closeSidebar()
     }
+}
 
-const handleCartUpdade = () => {
+const updateItemQty = (id, newQty) => {
+    const productIndex = productsCart.findIndex((product) => {
+        if (product.id === id) {
+        return true 
+        }
+        return false
+    })
+    productsCart[productIndex].qty = parseInt(newQty)
+    handleCartUpdade(false)
+
+}
+const handleCartUpdade = (renderItens = true) => {
     const emptyCartEl = document.querySelector('#empty-cart')
     const cartWithProductsEl = document.querySelector('#cart-with-products')
     const cartProductsListEl = cartWithProductsEl.querySelector('ul')
@@ -107,16 +121,17 @@ const handleCartUpdade = () => {
         CartBadgeEl.textContent = total
         // Atualiza o total do carrinho
         const cartTotalEl = document.querySelector('.cart-total p:last-child')
-        cartTotalEl.textContent = totalPrice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})
-        
+        cartTotalEl.textContent = totalPrice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+
         // Exibir carrinho com produtos
         cartWithProductsEl.classList.add('cart-with-products-show')
         emptyCartEl.classList.remove('empty-cart-show')
         // Exibir produtos do carrinho na tela
+        if (renderItens) {
         cartProductsListEl.innerHTML = ''
         productsCart.forEach((product) => {
             const listItemEl = document.createElement('li')
-            listItemEl.innerHTML =  `
+            listItemEl.innerHTML = `
             <img src="${product.image}" alt="${product.name}" width="70"
                 height="70">
             <div>
@@ -128,18 +143,31 @@ const handleCartUpdade = () => {
                 <i class="fa-solid fa-trash-can"></i>
             </button>
         `
-           const btnRemoveEl = listItemEl.querySelector('button')
-           btnRemoveEl.addEventListener('click', () => {
-               removeOfCart(product.id)
-           })
+            const btnRemoveEl = listItemEl.querySelector('button')
+            btnRemoveEl.addEventListener('click', () => {
+                removeOfCart(product.id)
+            })
+            const inputQtyEl = listItemEl.querySelector('input')
+            inputQtyEl.addEventListener('keyup', (event) => {
+               updateItemQty(product.id, event.target.value)
+            })
+            inputQtyEl.addEventListener('keydown', (event) => {
+                if (event.key === '-' || event.key === '.' || event.key === ',') {
+                    event.preventDefault()
+                }
+                
+            })
+            inputQtyEl.addEventListener('change', (event) => {
+                updateItemQty(product.id, event.target.value)
+            })
             cartProductsListEl.appendChild(listItemEl)
         })
-        // Calcular o valor total do carrinho
+        }
 
-    }   else {
+    } else {
         // Esconder badge
         CartBadgeEl.classList.remove('btn-cart-badge-show')
-          // Exibir carrinho vazio
+        // Exibir carrinho vazio
         emptyCartEl.classList.add('empty-cart-show')
         cartWithProductsEl.classList.remove('cart-with-products-show')
     }
