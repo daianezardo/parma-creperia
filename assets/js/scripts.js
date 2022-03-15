@@ -60,7 +60,7 @@ const getSelectionElement = (group) => {
 }
 fetchProducts()
 
-const productsCart = []
+let productsCart = []
 const addTocart = newProduct => {
     const productIndex = productsCart.findIndex
     
@@ -79,11 +79,21 @@ const addTocart = newProduct => {
 
     handleCartUpdade()
 }
+    const removeOfCart = id => {
+       productsCart = productsCart.filter((product) => {
+            if (product.id === id) {
+                return false
+            }
+                return true
+        })
+        handleCartUpdade()
+    }
 
 const handleCartUpdade = () => {
     const emptyCartEl = document.querySelector('#empty-cart')
     const cartWithProductsEl = document.querySelector('#cart-with-products')
     const cartProductsListEl = cartWithProductsEl.querySelector('ul')
+    const CartBadgeEl = document.querySelector('.btn-cart-badge')
     if (productsCart.length > 0) {
         // Calcula totais
         let total = 0
@@ -93,7 +103,6 @@ const handleCartUpdade = () => {
             totalPrice = totalPrice + product.price * product.qty
         })
         // Atualizar a badge
-        const CartBadgeEl = document.querySelector('.btn-cart-badge')
         CartBadgeEl.classList.add('btn-cart-badge-show')
         CartBadgeEl.textContent = total
         // Atualiza o total do carrinho
@@ -119,13 +128,18 @@ const handleCartUpdade = () => {
                 <i class="fa-solid fa-trash-can"></i>
             </button>
         `
+           const btnRemoveEl = listItemEl.querySelector('button')
+           btnRemoveEl.addEventListener('click', () => {
+               removeOfCart(product.id)
+           })
             cartProductsListEl.appendChild(listItemEl)
         })
         // Calcular o valor total do carrinho
 
     }   else {
-        // Exibir carrinho vazio
-        
+        // Esconder badge
+        CartBadgeEl.classList.remove('btn-cart-badge-show')
+          // Exibir carrinho vazio
         emptyCartEl.classList.add('empty-cart-show')
         cartWithProductsEl.classList.remove('cart-with-products-show')
     }
