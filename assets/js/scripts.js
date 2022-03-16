@@ -61,6 +61,10 @@ const getSelectionElement = (group) => {
 fetchProducts()
 
 let productsCart = []
+const savedProducts = localStorage.getItem('productsCart')
+if (savedProducts) {
+productsCart = JSON.parse(savedProducts)
+}
 const addTocart = newProduct => {
     const productIndex = productsCart.findIndex
 
@@ -93,17 +97,27 @@ const removeOfCart = id => {
 }
 
 const updateItemQty = (id, newQty) => {
+    const newQtyNumber = parseInt(newQty)
+    if (isNaN(newQtyNumber)) {
+        return
+    }
+    if (newQtyNumber > 0) {
     const productIndex = productsCart.findIndex((product) => {
         if (product.id === id) {
         return true 
         }
         return false
     })
-    productsCart[productIndex].qty = parseInt(newQty)
+    productsCart[productIndex].qty = newQtyNumber
     handleCartUpdade(false)
-
+    } else {
+        removeOfCart(id)
+    }
 }
 const handleCartUpdade = (renderItens = true) => {
+    // Salva carrinho no localstorage
+    const productsCartString = JSON.stringify(productsCart)
+    localStorage.setItem('productsCart', productsCartString)
     const emptyCartEl = document.querySelector('#empty-cart')
     const cartWithProductsEl = document.querySelector('#cart-with-products')
     const cartProductsListEl = cartWithProductsEl.querySelector('ul')
@@ -172,5 +186,12 @@ const handleCartUpdade = (renderItens = true) => {
         cartWithProductsEl.classList.remove('cart-with-products-show')
     }
 }
-handleCartUpdade()
 
+handleCartUpdade()
+// Atualiza carrinho se outra aba for aberta 
+window.addEventListener('storage', (event) => {
+    if (event.key === 'productsCart') {
+       productsCart = JSON.parse(event.newValue)
+       handleCartUpdade()
+    }
+})
