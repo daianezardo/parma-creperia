@@ -18,10 +18,11 @@ cartSidebarEl.addEventListener('click', (event) => {
     event.stopPropagation()
 })
 const btnAddMore = document.querySelector('#btn-add-more')
-btnAddMore.addEventListener('click', closeSidebar)
+btnAddMore?.addEventListener('click', closeSidebar)
 
+const groupsRootEl = document.querySelector('#groups-root')
 const fetchProducts = () => {
-    const groupsRootEl = document.querySelector('#groups-root')
+    
     fetch('/products.json')
         .then(res => res.json())
         .then(data => {
@@ -65,7 +66,9 @@ const getSelectionElement = (group) => {
 
     return sectionEl
 }
+if (groupsRootEl) {
 fetchProducts()
+}
 
 let productsCart = []
 const savedProducts = localStorage.getItem('productsCart')
@@ -201,4 +204,19 @@ window.addEventListener('storage', (event) => {
        productsCart = JSON.parse(event.newValue)
        handleCartUpdade()
     }
+})
+
+const formCheckoutEl = document.querySelector('.form-checkout')
+formCheckoutEl?.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const text = `Confira o pedido 
+    abaixo:\n-----------------------\n 
+    *2x Crepe Calabresa* - R$ 67,80 
+    *Taxa de entrega:* A combinar\n 
+    *Total: R$ 67,80 *
+    \n---------------------------\n 
+    *Nome do cliente*\n 
+    (31) 99999-9999\n\n
+    Rua X, 320, Bairro Y, Belo Horizonte`   
+    window.open(`https://api.whatsapp.com/send?phone=5531999999999&text=${encodeURI(text)}`, '_blank')
 })

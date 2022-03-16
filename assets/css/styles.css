@@ -11,6 +11,7 @@ body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 16px;
     padding-top: 90px;
+    
 }
 
 :root {
@@ -194,6 +195,7 @@ h3, .h3 {
      padding: 9px 0;
      border: 1px solid var(--main-color);
      cursor: pointer;
+     text-decoration: none;
  }
 
  .btn-main {
@@ -418,4 +420,37 @@ h3, .h3 {
     padding: 9px;
     font-size: 16px;
 
+}
+
+.form-input::placeholder,
+.form-input:-ms-input-placeholder,
+.form-input:-ms-input-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label { 
+    color: #333;
+    display: block;
+    font-weight: 600;
+}
+
+.form-group .form-input { 
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+/* FORM CHECKOUT */
+
+.form-checkout {
+    max-width: 424px;
+    margin: 0 auto;
 }
