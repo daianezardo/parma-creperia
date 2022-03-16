@@ -1,5 +1,6 @@
 const cartSidebarEl = document.querySelector('.cart-sidebar')
-function openSidebar() {
+function openSidebar(event) {
+    event.stopPropagation()
     cartSidebarEl.classList.add('cart-sidebar-open')
 }
 function closeSidebar() {
@@ -12,6 +13,12 @@ btnCartEl.addEventListener('click', openSidebar)
 
 const btnCartcloseEl = document.getElementById('btn-close-cart')
 btnCartcloseEl.addEventListener('click', closeSidebar)
+document.addEventListener('click', closeSidebar)
+cartSidebarEl.addEventListener('click', (event) => {
+    event.stopPropagation()
+})
+const btnAddMore = document.querySelector('#btn-add-more')
+btnAddMore.addEventListener('click', closeSidebar)
 
 const fetchProducts = () => {
     const groupsRootEl = document.querySelector('#groups-root')

@@ -368,6 +368,8 @@ h3, .h3 {
 }
 #cart-with-products li div {
    flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 0%;
 }
 
 .cart-total {
