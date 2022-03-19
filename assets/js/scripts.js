@@ -209,14 +209,29 @@ window.addEventListener('storage', (event) => {
 const formCheckoutEl = document.querySelector('.form-checkout')
 formCheckoutEl?.addEventListener('submit', (event) => {
     event.preventDefault()
-    const text = `Confira o pedido 
-    abaixo:\n-----------------------\n 
-    *2x Crepe Calabresa* - R$ 67,80 
-    *Taxa de entrega:* A combinar\n 
-    *Total: R$ 67,80 *
-    \n---------------------------\n 
-    *Nome do cliente*\n 
-    (31) 99999-9999\n\n
-    Rua X, 320, Bairro Y, Belo Horizonte`   
-    window.open(`https://api.whatsapp.com/send?phone=5531999999999&text=${encodeURI(text)}`, '_blank')
+    let text = `Confira o pedido
+    abaixo:\n-----------------------\n\n`
+    let total = 0
+    productsCart.forEach(product => {
+        text += `*${product.qty}x ${product.name}* - ${product.price.toLocaleString('pt-br', { style: 'currency', currency:'BRL'})}\n`
+        total += product.price * product.qty
+    })
+    text += '\n*Taxa de entrega:* A combinar\n'
+    text += `*Total: ${total.toLocaleString('pt-br', { style: 'currency', currency: 'BRL'})}`
+    text += '\n------------------------\n\n'
+    text += `*${formCheckoutEl.elements['input-name'].value}*\n`
+    text += `${formCheckoutEl.elements['input-phone'].value}\n\n`
+    text += `${formCheckoutEl.elements['input-address'].value}, ${formCheckoutEl.elements['input-number'].value}\n`
+
+    const complement = formCheckoutEl.elements
+    ['input-complement'].value
+    if (complement) {
+        text += ` - ${complement}`
+    }
+
+    text += `\n${formCheckoutEl.elements['input-neighborhood'].value}, ${formCheckoutEl.elements['input-city'].value}\n`
+    text += formCheckoutEl.elements['input-cep'].value
+
+    const subdomain = window.innerWidth > 768 ? 'web' : 'api'
+    window.open(`https://${subdomain}.whatsapp.com/send?phone=5531999999999&text=${encodeURI(text)}`, '_blank')
 })
