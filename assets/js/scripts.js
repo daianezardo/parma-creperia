@@ -209,6 +209,11 @@ window.addEventListener('storage', (event) => {
 const formCheckoutEl = document.querySelector('.form-checkout')
 formCheckoutEl?.addEventListener('submit', (event) => {
     event.preventDefault()
+    if (productsCart.length == 0) { 
+    alert('Nenhum produto no carrinho')
+        return
+    } 
+
     let text = `Confira o pedido
     abaixo:\n-----------------------\n\n`
     let total = 0
