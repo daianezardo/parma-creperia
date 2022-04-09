@@ -44,15 +44,15 @@
 
 # Sobre o projeto
 
-Pizzarias gastam energia e recursos respondendo um cliente por vez através de WhatsApp e, por outro lado, clientes ficam aguardando para ver os produtos e finalizar o pedido.
+Empresas gastam energia e recursos respondendo um cliente por vez através de WhatsApp e, por outro lado, clientes ficam aguardando para ver os produtos e finalizar o pedido.
 
-Com o catálogo virtual o cliente visualiza os produtos com facilidade, seleciona quais deseja e já envia todos os dados que a pizzaria precisa para finalizar o pedido via WhatsApp, acelerando este processo.
+Com o catálogo virtual o cliente visualiza os produtos com facilidade, seleciona quais deseja e já envia todos os dados que a empresa precisa para finalizar o pedido via WhatsApp, acelerando este processo.
 
 A demonstração do site funcionando está disponível no link https://awesome-payne-31e2d1.netlify.app/
 
 <div align="center">
   <a href="https://sad-cori-ec4c3e.netlify.app/">
-    <img src="https://user-images.githubusercontent.com/99056875/162579082-b3d6e077-d268-4563-a00b-f7f3051ccf40.gif" alt="Demonstração Nostra Pizza" width="250" height="556" />
+    <img src="https://user-images.githubusercontent.com/99056875/162579082-b3d6e077-d268-4563-a00b-f7f3051ccf40.gif" alt="Demonstração Parma Creperia" width="250" height="556" />
   </a>
 </div>
 
