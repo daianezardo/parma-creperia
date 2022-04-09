@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://awesome-payne-31e2d1.netlify.app/">
-    <img src="assets/img/logo-nostra-pizza.svg" alt="Logo Nostra Pizza" width="200" height="142">
+    <img src="assets/img/logo-nostra-pizza.svg" alt="Logo Parma Creperia" width="200" height="142">
   </a>
   
   <h3 align="center">Parma Creperia</h3>
