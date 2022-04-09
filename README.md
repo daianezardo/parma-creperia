@@ -7,7 +7,8 @@
 <br />
 <div align="center">
   <a href="https://awesome-payne-31e2d1.netlify.app/">
-    <img src="assets/img/logo-nostra-pizza.svg" alt="Logo Parma Creperia" width="200" height="142">
+    <img src=https://user-images.githubusercontent.com/99056875/162573894-5f35144f-e9d5-4469-a21b-bb802a91d279.png
+ alt="Logo Parma Creperia" width="200" height="142">
   </a>
   
   <h3 align="center">Parma Creperia</h3>
@@ -49,9 +50,11 @@ Com o catálogo virtual o cliente visualiza os produtos com facilidade, selecion
 
 A demonstração do site funcionando está disponível no link https://awesome-payne-31e2d1.netlify.app/
 
-
- ![ezgif com-gif-maker](https://user-images.githubusercontent.com/99056875/162579082-b3d6e077-d268-4563-a00b-f7f3051ccf40.gif)
-
+<div align="center">
+  <a href="https://sad-cori-ec4c3e.netlify.app/">
+    <img src="https://user-images.githubusercontent.com/99056875/162579082-b3d6e077-d268-4563-a00b-f7f3051ccf40.gif" alt="Demonstração Nostra Pizza" width="250" height="556" />
+  </a>
+</div>
 
 
 Os recursos implementados foram:
