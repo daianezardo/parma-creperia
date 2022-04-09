@@ -65,7 +65,6 @@ Os recursos implementados foram:
 - Remover produtos da sacola de compras;
 - Alterar quantidade dos produtos na sacola;
 - Finalizar o pedido enviando os dados para o WhatsApp;
-- Tela de saiba mais com informações da empresa.
 
 
 # Processo de trabalho
@@ -94,7 +93,6 @@ git clone https://github.com/daianezardo/parma-creperia
 - HTML 5
 - CSS
 - Javascript Vanilla
-- [Bootstrap](https://getbootstrap.com)
 
 
 # Integrações
