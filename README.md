@@ -50,11 +50,9 @@ Com o catálogo virtual o cliente visualiza os produtos com facilidade, selecion
 A demonstração do site funcionando está disponível no link https://awesome-payne-31e2d1.netlify.app/
 
 
-<div align="center">
-  <a href="https://sad-cori-ec4c3e.netlify.app/">
-    <img src="github/demo-video.gif" alt="Demonstração Parma Creperia" width="250" height="556" />
-  </a>
-</div>
+ ![ezgif com-gif-maker](https://user-images.githubusercontent.com/99056875/162579082-b3d6e077-d268-4563-a00b-f7f3051ccf40.gif)
+
+
 
 Os recursos implementados foram:
 
