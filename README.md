@@ -52,7 +52,7 @@ A demonstração do site funcionando está disponível no link https://awesome-p
 
 <div align="center">
   <a href="https://sad-cori-ec4c3e.netlify.app/">
-    <img src="github/demo-video.gif" alt="Demonstração Nostra Pizza" width="250" height="556" />
+    <img src="github/demo-video.gif" alt="Demonstração Parma Creperia" width="250" height="556" />
   </a>
 </div>
 
