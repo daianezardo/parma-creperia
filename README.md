@@ -35,9 +35,6 @@
     </li>
     <li><a href="#tecnologias-utilizadas">Tecnologias utilizadas</a></li>
     <li><a href="#integrações">Integrações</a></li>
-    <li><a href="#autor">Autor</a></li>
-    <li><a href="#agradecimentos">Agradecimentos</a></li>
-    <li><a href="#licença">Licença</a></li>
   </ol>
 </details>
 
